@@ -3,91 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Master Lever | Olga Gorelkina</title>
-<meta name="description" content="What the Master Lever, or straight-ticket voting option, is, why US states fight over it, and research on how it shifts politicians' positions.">
+<meta name="color-scheme" content="light">
+<title>Master Lever | Olga Gorelkina</title>
+<meta name="description" content="The Master Lever, or straight-ticket voting option, and research on its effect on politicians' positions.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F7F5F0;--surface:#FFF;--ink:#1B2236;--ink-2:#4A5166;--ink-3:#7A8094;--accent:#1F3A68;--accent-soft:#E6ECF5;--brass:#A0682A;--brass-soft:#F4EADC;--rule:#E3DFD6;--red:#B23A3A;--blue:#2F5DA8;--serif:'Newsreader',Georgia,serif;--sans:'Inter',-apple-system,sans-serif}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151E;--surface:#1A1F2C;--ink:#ECEEF3;--ink-2:#B7BCCB;--ink-3:#8A90A2;--accent:#9DB8E8;--accent-soft:#22304A;--brass:#D9A46A;--brass-soft:#3A2D1E;--rule:#2A3040;--red:#E07A7A;--blue:#8EB0EE}}
-:root[data-theme="dark"]{--bg:#12151E;--surface:#1A1F2C;--ink:#ECEEF3;--ink-2:#B7BCCB;--ink-3:#8A90A2;--accent:#9DB8E8;--accent-soft:#22304A;--brass:#D9A46A;--brass-soft:#3A2D1E;--rule:#2A3040;--red:#E07A7A;--blue:#8EB0EE}
+:root{--text:#222;--muted:#5f5f5f;--link:#1d4e89;--rule:#dddddd;--serif:'EB Garamond',Georgia,serif;--sans:'Source Sans 3',Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--sans);font-size:17px;line-height:1.75;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
-a:hover{border-bottom-color:var(--accent)}
-.wrap{max-width:720px;margin:0 auto;padding:0 24px}
-header{border-bottom:1px solid var(--rule);padding:18px 0}
-header .wrap{max-width:1040px;display:flex;justify-content:space-between;align-items:center}
-header a{font-family:var(--serif);font-size:1.2rem;color:var(--ink);border:0}
-header .back{font-family:var(--sans);font-size:.86rem;color:var(--ink-2)}
-.kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);font-weight:600;margin:56px 0 12px}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.1;margin-bottom:18px}
-.dek{font-family:var(--serif);font-size:1.3rem;color:var(--ink-2);line-height:1.5;margin-bottom:36px}
-h2{font-family:var(--serif);font-weight:500;font-size:1.6rem;margin:44px 0 12px}
-p{margin-bottom:16px;color:var(--ink-2)}
-p strong{color:var(--ink);font-weight:600}
-blockquote{border-left:3px solid var(--brass);padding:4px 0 4px 20px;margin:24px 0;font-family:var(--serif);font-size:1.2rem;font-style:italic;color:var(--ink)}
-blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.84rem;color:var(--ink-3);margin-top:8px}
-.ballot{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:22px;margin:28px 0}
-.ballot h3{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:14px}
-.states{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
-.st{border:1px solid var(--rule);border-radius:4px;padding:10px 6px;text-align:center;font-size:.86rem;font-weight:500}
-.st small{display:block;font-size:.7rem;color:var(--red);font-weight:600;letter-spacing:.06em}
-.note{font-size:.82rem;color:var(--ink-3);margin-top:12px}
-.papers{display:grid;gap:12px;margin:20px 0}
-.paper{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:18px 20px}
-.paper b{font-family:var(--serif);font-weight:500;font-size:1.12rem;display:block;margin-bottom:4px}
-.paper span{font-size:.88rem;color:var(--ink-2)}
-ul.src{list-style:none;font-size:.92rem}
-ul.src li{padding:8px 0;border-bottom:1px solid var(--rule)}
-ul.src li b{display:inline-block;width:110px;color:var(--ink);font-weight:600}
-footer{margin-top:64px;padding:28px 0 40px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--ink-3)}
-@media (max-width:600px){.wrap{padding:0 16px}.states{grid-template-columns:repeat(2,1fr)}ul.src li b{display:block;width:auto}}
+body{font-family:var(--serif);font-size:19px;line-height:1.6;color:var(--text);background:#fff}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--rule)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;max-width:900px}
+header a.name{font-size:1.25rem;color:var(--text)}
+header a.back{font-family:var(--sans);font-size:.85rem;color:var(--muted)}
+.banner{height:180px;background:url(header.jpg) center 60%/cover no-repeat}
+h1{font-weight:500;font-size:2.4rem;margin:34px 0 14px}
+h2{font-weight:500;font-size:1.5rem;margin:30px 0 8px}
+p{margin-bottom:14px;text-align:justify}
+blockquote{margin:18px 0 18px 24px;font-style:italic;color:var(--muted)}
+ul{margin:0 0 14px 22px}
+li{margin-bottom:4px}
+footer{border-top:1px solid var(--rule);margin-top:40px;padding:20px 0 34px;font-family:var(--sans);font-size:.8rem;color:#8a8a8a}
+@media (max-width:600px){.wrap{padding:0 16px}body{font-size:18px}p{text-align:left}.banner{height:130px}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a href="index.html">Olga Gorelkina</a><a class="back" href="index.html#research">&larr; Back to research</a></div></header>
+<header><div class="wrap"><a class="name" href="index.html">Olga Gorelkina</a><a class="back" href="index.html">Home</a></div></header>
+<div class="banner"></div>
 <main class="wrap">
-  <div class="kicker">Explainer &middot; Ballot design</div>
-  <h1>The Master Lever</h1>
-  <p class="dek">One box on the ballot lets a voter choose a party for every office at once. Whether it exists changes who wins, and how the winners vote.</p>
+  <h1>Master Lever</h1>
+  <p><strong>Master Lever</strong>, or Straight-Ticket Voting Option: a ballot option that offers voters the possibility to vote for the candidates of a specific party for all elections listed on a ballot. According to one study, the Master Lever was used by 45 to 58% of Texas voters in 1998 to 2010.</p>
 
-  <h2>What it is</h2>
-  <p>The <strong>Master Lever</strong>, or straight-ticket voting option, lets voters select the candidates of one party for all partisan offices on the ballot with a single mark, instead of filling in each race separately. It is not a fringe habit: according to one study, between 45 and 58 percent of Texas voters used it from 1998 to 2010.</p>
+  <p>In the run up to the 2016 general election, the GOP-held legislature of the state of Michigan passed a bill to ban the Master Lever after a number of previous unsuccessful attempts. (In Michigan, the Master Lever was believed to benefit the Democrats ever since the Great Depression.) The Democrats challenged the ban in court and argued that eliminating the quick option of voting for all candidates from a single party would disenfranchise African-American voters. The U.S. Supreme Court declined to reinstate the ban, so the Master Lever remained in place for the November election. Remarkably, the GOP benefited from losing the case. Some of the unexpected GOP winners got nearly half of their votes from voters who pulled the "Republican" lever.</p>
 
-  <h2>The Michigan fight of 2016</h2>
-  <p>In the run-up to the 2016 general election, Michigan&rsquo;s Republican-held legislature passed a bill banning the Master Lever, after several earlier attempts. Since the Great Depression the option had been thought to favour Democrats. Democrats challenged the ban, arguing that removing the quick option would disenfranchise African-American voters, and the courts let the Master Lever stay in place for November.</p>
-  <p>The outcome surprised both sides. Republicans gained from losing the case: some unexpected GOP winners received nearly half of their votes from voters who pulled the &ldquo;Republican&rdquo; lever.</p>
-  <blockquote>&ldquo;We ended being the benefactors of straight-ticket voting.&rdquo;<cite>State Rep. Lisa Posthumus Lyons, chair of the Michigan House Elections Committee</cite></blockquote>
+  <blockquote>"The Republicans (repealed) straight ticket voting, the Democrats fought it and got it held, and then we ended being the benefactors of straight-ticket voting."<br>State Rep. Lisa Posthumus Lyons, R-Alto, chair of the House Elections Committee</blockquote>
 
-  <div class="ballot">
-    <h3>States offering the Master Lever in the 2016 general election</h3>
-    <div class="states">
-      <div class="st">Alabama<small>TRUMP</small></div><div class="st">Indiana<small>TRUMP</small></div><div class="st">Iowa<small>TRUMP</small></div><div class="st">Kentucky<small>TRUMP</small></div><div class="st">Michigan<small>TRUMP</small></div>
-      <div class="st">Oklahoma<small>TRUMP</small></div><div class="st">Pennsylvania<small>TRUMP</small></div><div class="st">South Carolina<small>TRUMP</small></div><div class="st">Texas<small>TRUMP</small></div><div class="st">Utah<small>TRUMP</small></div>
-    </div>
-    <p class="note">All ten voted for Donald Trump. The courts later upheld Michigan&rsquo;s ban, but voters restored straight-ticket voting through Proposal 3 in 2018. The current list of states is kept by the National Conference of State Legislatures.</p>
-  </div>
+  <p>The ban was later upheld on appeal, and Michigan voters then restored straight-ticket voting through Proposal 3 in 2018.</p>
 
-  <h2>What the research finds</h2>
-  <p>Michigan is one episode in a long series of debates as most US states abolished the Master Lever over the decades. With Ioanna Grypari and Erin Hengel, I study what the option does to politicians.</p>
-  <div class="papers">
-    <a class="paper" href="https://doi.org/10.1007/s00355-022-01418-2"><b>The Theory of Straight Ticket Voting</b><span>Social Choice and Welfare, 2022. The option makes candidates more loyal to their party while raising the weight of non-partisan voters in candidate selection, with asymmetric effects on the two parties.</span></a>
-    <a class="paper" href="https://erinhengel.github.io/MLEmpirical/master-lever.html"><b>One Strike and You&rsquo;re Out: The Effects of the Master Lever on Senator Positions</b><span>Working paper. In a difference-in-differences design, the Master Lever shifts US senators&rsquo; roll-call positions 3 to 6 percent to the right, driven largely by Republicans.</span></a>
-  </div>
+  <p>This dispute over the Master Lever in Michigan is only one in a series of debates that most US states went through as they eliminated the option over the decades. In the 2016 general election, ten states offered it: Alabama, Indiana, Iowa, Kentucky, Michigan, Oklahoma, Pennsylvania, South Carolina, Texas and Utah. All ten voted for Donald Trump.</p>
+
+  <h2>Our research</h2>
+  <ul>
+    <li><a href="https://doi.org/10.1007/s00355-022-01418-2">The Theory of Straight Ticket Voting</a>, with Ioanna Grypari and Erin Hengel. <em>Social Choice and Welfare</em>, 2023.</li>
+    <li><a href="https://erinhengel.github.io/MLEmpirical/master-lever.html">One Strike and You're Out: The Effects of the Master Lever on Senator Positions</a>, with Ioanna Grypari and Erin Hengel. Working paper.</li>
+  </ul>
 
   <h2>Further reading</h2>
-  <ul class="src">
-    <li><b>Current law</b><a href="https://www.ncsl.org/elections-and-campaigns/straight-ticket-voting">National Conference of State Legislatures: straight-ticket voting</a></li>
-    <li><b>Michigan</b><a href="https://www.wsj.com/articles/supreme-court-lets-michigan-use-straight-party-voting-in-november-1473435855">Wall Street Journal</a> &middot; <a href="http://www.huffingtonpost.com/entry/michigan-supreme-court-straight-ticket-voting_us_57c9e31ae4b0e60d31df336d">HuffPost</a> &middot; <a href="http://www.detroitnews.com/story/news/politics/2016/11/14/gop-benefits-straight-party-voting-opposes/93784152/">Detroit News</a></li>
-    <li><b>Wisconsin</b><a href="http://archive.jsonline.com/blogs/news/121413453.html">Milwaukee Journal Sentinel</a></li>
-    <li><b>Rhode Island</b><a href="http://www.providencejournal.com/article/20140702/news/307029927">Providence Journal</a> &middot; <a href="http://ripr.org/post/inconvenient-master-lever-truth">Rhode Island Public Radio</a></li>
-  </ul>
-  <footer>&copy; Olga Gorelkina &middot; <a href="index.html">Home</a></footer>
+  <p>States currently offering the Master Lever: <a href="https://www.ncsl.org/elections-and-campaigns/straight-ticket-voting">National Conference of State Legislatures</a>.</p>
+  <p>Michigan, 2016:
+    <a href="http://www.huffingtonpost.com/entry/michigan-supreme-court-straight-ticket-voting_us_57c9e31ae4b0e60d31df336d">HuffPost</a>,
+    <a href="https://www.wsj.com/articles/supreme-court-lets-michigan-use-straight-party-voting-in-november-1473435855">Wall Street Journal</a>,
+    <a href="http://www.detroitnews.com/story/news/politics/2016/11/14/gop-benefits-straight-party-voting-opposes/93784152/">Detroit News</a>.
+    Wisconsin: <a href="http://archive.jsonline.com/blogs/news/121413453.html">Milwaukee Journal Sentinel</a>.
+    Rhode Island: <a href="http://www.providencejournal.com/article/20140702/news/307029927">Providence Journal</a>,
+    <a href="http://ripr.org/post/inconvenient-master-lever-truth">Rhode Island Public Radio</a>.</p>
 </main>
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<footer><div class="wrap"><a href="index.html">Olga Gorelkina</a> &middot; Africa Business School, UM6P</div></footer>
 </body>
 </html>
