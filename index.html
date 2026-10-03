@@ -167,16 +167,41 @@ details p{font-size:.93rem;color:var(--ink-2);margin-top:8px;max-width:48em;line
 .profiles a{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--rule);color:var(--ink);font-size:.95rem}
 .profiles a:hover{color:var(--accent);border-bottom-color:var(--rule)}
 .profiles a span{color:var(--ink-3);font-size:.84rem}
+.nav-logo{display:flex;align-items:center;border:0;padding-left:16px;margin-left:4px;border-left:1px solid var(--rule)}
+.nav-logo:hover{border-bottom:0}
+.nav-logo img{height:30px;width:auto;display:block}
+:root[data-theme="dark"] .nav-logo img{filter:brightness(0) invert(.9)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .nav-logo img{filter:brightness(0) invert(.9)}}
+.about-grid{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start}
+.aside h4{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin:0 0 10px}
+.aside ul{list-style:none;margin-bottom:22px}
+.aside .fields li{font-size:.92rem;color:var(--ink-2);padding:3px 0}
+.aside .fields b{color:var(--ink);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags li{font-size:.78rem;padding:4px 10px;border-radius:3px;background:var(--accent-soft);color:var(--accent);font-weight:500}
+.students{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.stu{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:18px 20px;display:flex;flex-direction:column;gap:4px}
+.stu .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.stu b{font-family:var(--serif);font-weight:500;font-size:1.15rem}
+.stu .role{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--brass);white-space:nowrap}
+.stu .deg{font-size:.86rem;color:var(--ink-3)}
+.stu .thesis{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--ink-2);line-height:1.45}
+.stu .now{font-size:.86rem;color:var(--ink);margin-top:4px}
+.stu .now span{color:var(--ink-3)}
+.stu .links{margin-top:6px}
+.invite{max-width:40em;color:var(--ink-2);margin-bottom:18px}
 footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px solid var(--rule)}
 
 @media (max-width:900px){
   .hero .wrap{grid-template-columns:1fr;gap:36px}
   .portrait{max-width:200px;order:-1}
   .themes,.feature{grid-template-columns:1fr 1fr}
-  .grid2,.contact .wrap{grid-template-columns:1fr}
+  .grid2,.contact .wrap,.about-grid{grid-template-columns:1fr}
+  .students{grid-template-columns:1fr}
   .talks{columns:1}
 }
 @media (max-width:820px){
+  .nav-logo{display:none}
   .menu-btn{display:block}
   nav ul{display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:0;background:var(--bg);border-bottom:1px solid var(--rule);padding:8px 16px 16px}
   nav ul.open{display:flex}
@@ -204,11 +229,13 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
           <li><a href="#about">About</a></li>
           <li><a href="#research">Research</a></li>
           <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#students">Students</a></li>
           <li><a href="#outreach">Outreach</a></li>
           <li><a href="#cv">CV</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <a class="nav-logo" href="https://abs.um6p.ma" target="_blank" rel="noopener"><img src="um6p-abs-logo.png" alt="Africa Business School, UM6P"></a>
       <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       </button>
@@ -233,7 +260,8 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
         <a class="btn" href="https://scholar.google.com/citations?user=OfLk198AAAAJ&amp;hl=en">Google Scholar</a>
         <a class="btn" href="https://ideas.repec.org/f/pgo729.html">RePEc</a>
-        <a class="btn" href="#cv">Curriculum Vitae</a>
+        <a class="btn" href="Olga_Gorelkina_CV.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>Download CV</a>
       </div>
     </div>
     <div class="portrait"><img src="photo.jpg" alt="Portrait of Olga Gorelkina" width="640" height="635"></div>
@@ -243,10 +271,27 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
 <section id="about">
   <div class="wrap">
     <div class="sec-head"><h2><span class="num">01</span>About</h2></div>
+    <div class="about-grid">
     <div class="prose">
       <p>I am an Assistant Professor in Business Economics at <strong>Africa Business School, UM6P</strong>, in Rabat, Morocco. My research focuses on applications of game theory, in particular <strong>mechanism design, auctions and information economics</strong>, with recent work on the economics of <strong>blockchain consensus and privacy</strong>.</p>
       <p>Before joining UM6P in 2023, I was a tenured Lecturer in Economics at the <strong>University of Liverpool Management School</strong>, a Senior Research Fellow in Martin Hellwig&rsquo;s group at the <strong>Max Planck Institute for Research on Collective Goods</strong> in Bonn, and a Visiting Professor at the <strong>Cowles Foundation, Yale University</strong>. I earned my Ph.D. at the <strong>Toulouse School of Economics</strong> under the supervision of David Martimort, and hold degrees from the New Economic School and Moscow State University. I received my University Habilitation in 2024.</p>
       <p>Alongside theory, I have run field and neuroeconomic experiments on bidding and bargaining, studied how ballot design shapes politicians&rsquo; positions, and now co-supervise doctoral work on climate risk and financial systems.</p>
+    </div>
+    <aside class="aside">
+      <h4>Fields</h4>
+      <ul class="fields">
+        <li><b>Primary:</b> Economic Theory, Market Design</li>
+        <li><b>Secondary:</b> Industrial Organization, Theory of Incentives</li>
+      </ul>
+      <h4>Research interests</h4>
+      <ul class="tags">
+        <li>Mechanism design</li><li>Auctions</li><li>Collusion</li><li>Blockchain consensus</li><li>Privacy</li><li>Bounded rationality</li><li>Ballot design</li><li>Information economics</li><li>Law and economics</li>
+      </ul>
+      <h4>Methods</h4>
+      <ul class="tags">
+        <li>Game theory</li><li>Mechanism design</li><li>Field experiments</li><li>Lab and SOEP experiments</li><li>EEG and fMRI</li><li>Difference-in-differences</li>
+      </ul>
+    </aside>
     </div>
     <div class="themes" role="list">
       <button class="theme" data-go="mech" role="listitem"><b>Mechanism design &amp; auctions</b><span>Collusion-proof auctions, bounded rationality, dynamic implementation</span></button>
@@ -310,7 +355,7 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
       </article>
 
       <article class="paper" data-t="pol">
-        <div class="meta"><span class="venue">Social Choice and Welfare</span><span class="year">2022</span></div>
+        <div class="meta"><span class="venue">Social Choice and Welfare</span><span class="year">2023</span></div>
         <h4><a href="https://doi.org/10.1007/s00355-022-01418-2">The Theory of Straight Ticket Voting</a></h4>
         <div class="authors">with <a href="https://sites.google.com/view/ioannagrypari/home">Ioanna Grypari</a> and <a href="https://www.erinhengel.com/">Erin Hengel</a></div>
         <div class="links"><a href="https://doi.org/10.1007/s00355-022-01418-2">Published version</a><a href="https://link.springer.com/content/pdf/10.1007/s00355-022-01418-2.pdf">PDF (open access)</a><a href="master-lever.html">The Master Lever explained</a></div>
@@ -473,7 +518,7 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
 
 <section id="teaching">
   <div class="wrap">
-    <div class="sec-head"><h2><span class="num">03</span>Teaching &amp; Supervision</h2></div>
+    <div class="sec-head"><h2><span class="num">03</span>Teaching</h2></div>
     <div class="grid2">
       <div class="card">
         <h4>Courses taught as module leader</h4>
@@ -490,15 +535,13 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
       </div>
       <div>
         <div class="card" style="margin-bottom:16px">
-          <h4>Doctoral students</h4>
-          <div class="course"><span>Safaa Basabreen, primary supervisor</span><em>Liverpool &middot; 2025</em></div>
-          <div class="course"><span>Zining Huang, primary supervisor</span><em>Liverpool &middot; 2023</em></div>
-          <div class="course"><span>Maxime Reynouard, co-supervisor</span><em>Paris Dauphine &middot; 2025</em></div>
-          <div class="course"><span>Tien Nguyen, co-supervisor</span><em>Liverpool &middot; 2025</em></div>
-          <div class="course"><span>Alice Newton-Fenner, co-supervisor</span><em>Liverpool &middot; 2023</em></div>
-          <div class="course"><span>Yunchou Wu, co-supervisor</span><em>Liverpool &middot; 2020</em></div>
-          <div class="course"><span>Georgios Chionas, co-supervisor</span><em>Liverpool</em></div>
-          <div class="course"><span>Obinna Dominic Uke, co-supervisor</span><em>UM6P &middot; in progress</em></div>
+          <h4>Supervision at a glance</h4>
+          <div class="course"><span>PhDs supervised to completion</span><em>6</em></div>
+          <div class="course"><span>PhD candidates in progress</span><em>2</em></div>
+          <div class="course"><span>PhD examinations</span><em>2</em></div>
+          <div class="course"><span>MSc dissertations, Liverpool</span><em>20+</em></div>
+          <div class="course"><span><a href="#students">Meet the students &rarr;</a></span><em></em></div>
+        </div>
         </div>
         <p style="font-size:.9rem;color:var(--ink-2)">Over 20 MSc dissertations supervised in Economics and Finance at Liverpool (2017 to 2022) and senior essays at Yale (2016). External PhD examiner at INSEA Rabat (2025). <strong>Excellence in Teaching award</strong>, University of Liverpool Management School, 2019. Fellow of the UK Higher Education Academy.</p>
       </div>
@@ -506,9 +549,61 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
   </div>
 </section>
 
+<section id="students">
+  <div class="wrap">
+    <div class="sec-head"><h2><span class="num">04</span>Doctoral Students</h2></div>
+    <h3 class="sub" style="margin-top:0">Supervised</h3>
+    <div class="students">
+      <div class="stu"><div class="top"><b>Obinna Dominic Uke</b><span class="role">Co-supervisor</span></div>
+        <div class="deg">Ph.D. candidate, Africa Business School, UM6P, joint doctorate with COPPE, UFRJ</div>
+        <div class="thesis">Climate Risk, Carbon Pricing, and Financial Markets</div>
+        <div class="now"><span>Now:</span> Expected 2027, on the 2026/27 job market</div><div class="links"><a href="https://obinnaud.github.io/">Website</a></div></div>
+      <div class="stu"><div class="top"><b>Georgios Chionas</b><span class="role">Co-supervisor</span></div>
+        <div class="deg">Ph.D. candidate in Computer Science, University of Liverpool</div>
+        <div class="thesis">Thesis in progress on blockchain, mechanism design and algorithmic game theory</div>
+        <div class="links"><a href="https://scholar.google.com/citations?user=ht7HZV0AAAAJ&hl=en">Google Scholar</a></div></div>
+      <div class="stu"><div class="top"><b>Maxime Reynouard</b><span class="role">Co-director</span></div>
+        <div class="deg">Ph.D. 2025, Universit&eacute; Paris Dauphine-PSL, with Rida Laraki and Eugen Zalinescu</div>
+        <div class="thesis"><a href="https://theses.fr/s361599">Game Theory and Machine Learning for Modelling and Improving Blockchain Consensus Protocols</a></div>
+        <div class="now"><span>Now:</span> Nomadic Labs, Paris</div><div class="links"><a href="https://theses.fr/s361599">Thesis record</a><a href="https://dauphine.psl.eu/en/research/resume-database/profile/reynouard-maxime">Dauphine profile</a></div></div>
+      <div class="stu"><div class="top"><b>Safaa Basabreen</b><span class="role">Primary supervisor</span></div>
+        <div class="deg">Ph.D. 2025, University of Liverpool</div>
+        <div class="thesis"><a href="https://livrepository.liverpool.ac.uk/3190670/">Understanding Personal Savings Behaviour Through the Lens of Subjective Well-Being</a></div>
+        <div class="now"><span>Now:</span> Department of Accounting and Finance, Jazan University, Saudi Arabia</div><div class="links"><a href="https://livrepository.liverpool.ac.uk/3190670/">Thesis</a><a href="https://doi.org/10.1007/s11482-025-10447-9">Article, ARQOL 2025</a></div></div>
+      <div class="stu"><div class="top"><b>Phuoc Cam Tien Nguyen</b><span class="role">Co-supervisor</span></div>
+        <div class="deg">Ph.D. 2025, University of Liverpool</div>
+        <div class="thesis"><a href="https://livrepository.liverpool.ac.uk/3190790/">Microeconomics Theory Application in Cryptocurrency and Blockchain Technology</a></div>
+        <div class="now"><span>Now:</span> Mercor</div><div class="links"><a href="https://livrepository.liverpool.ac.uk/3190790/">Thesis</a></div></div>
+      <div class="stu"><div class="top"><b>Zining Huang</b><span class="role">Primary supervisor</span></div>
+        <div class="deg">Ph.D. 2023, University of Liverpool</div>
+        <div class="thesis"><a href="https://livrepository.liverpool.ac.uk/3171839/">Essays in Group Contests</a></div>
+        <div class="links"><a href="https://livrepository.liverpool.ac.uk/3171839/">Thesis</a><a href="https://orcid.org/0000-0003-2097-7866">ORCID</a></div></div>
+      <div class="stu"><div class="top"><b>Alice Newton-Fenner</b><span class="role">Co-supervisor</span></div>
+        <div class="deg">Ph.D. 2023, University of Liverpool (Neuroscience)</div>
+        <div class="thesis"><a href="https://livrepository.liverpool.ac.uk/3171186/">The Neural Dynamics of Reward Processing during Sealed-Bid Second-Price Auctions</a></div>
+        <div class="now"><span>Now:</span> Consumer Science Manager, Unilever</div><div class="links"><a href="https://livrepository.liverpool.ac.uk/3171186/">Thesis</a><a href="https://scholar.google.com/citations?user=3s7ENL0AAAAJ&hl=en">Google Scholar</a></div></div>
+      <div class="stu"><div class="top"><b>Yunchou Wu</b><span class="role">Co-supervisor</span></div>
+        <div class="deg">Ph.D. 2020, University of Liverpool</div>
+        <div class="thesis"><a href="https://livrepository.liverpool.ac.uk/3090824/">Essays in Health Economics: The Design of Primary Care Incentives</a></div>
+        <div class="now"><span>Now:</span> Health economics and outcomes research, OPEN Health</div><div class="links"><a href="https://livrepository.liverpool.ac.uk/3090824/">Thesis</a></div></div>
+    </div>
+    <h3 class="sub">Examined</h3>
+    <div class="students">
+      <div class="stu"><div class="top"><b>Mohamed Bouchta</b><span class="role">External examiner</span></div>
+        <div class="deg">Ph.D. 2026, INSEA Rabat</div>
+        <div class="thesis">Essays in Game Theory: Implementation in Strong Nash Equilibria and Applications to Allocation Problems</div>
+        <div class="links"></div></div>
+      <div class="stu"><div class="top"><b>Harvey Upton</b><span class="role">Internal examiner</span></div>
+        <div class="deg">Ph.D. 2019, University of Liverpool</div>
+        <div class="thesis">Essays in Behavioural Contract Theory</div>
+        <div class="now"><span>Now:</span> Humboldt University of Berlin</div><div class="links"><a href="https://sites.google.com/view/harveyupton">Website</a></div></div>
+    </div>
+  </div>
+</section>
+
 <section id="outreach">
   <div class="wrap">
-    <div class="sec-head"><h2><span class="num">04</span>Outreach &amp; Talks</h2></div>
+    <div class="sec-head"><h2><span class="num">05</span>Outreach &amp; Talks</h2></div>
     <div class="feature">
       <a class="fcard" href="https://www.opendemocracy.net/en/boris-johnson-triumphant-victory-or-distorted-electoral-system/">
         <span class="tag">Op-ed &middot; openDemocracy &middot; Dec 2019</span>
@@ -549,7 +644,7 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
 
 <section id="cv">
   <div class="wrap">
-    <div class="sec-head"><h2><span class="num">05</span>Curriculum Vitae</h2></div>
+    <div class="sec-head"><h2><span class="num">06</span>Curriculum Vitae</h2><a class="btn primary" href="Olga_Gorelkina_CV.pdf" download>Download full CV (PDF)</a></div>
     <div class="grid2">
       <div>
         <h3 class="sub" style="margin-top:0">Appointments</h3>
@@ -574,7 +669,7 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
         <h3 class="sub" style="margin-top:0">Education</h3>
         <ul class="tl">
           <li><span class="when">2024</span><div><b>University Habilitation in Economics</b></div></li>
-          <li><span class="when">2010</span><div><b>Ph.D. in Economics</b><span>Toulouse School of Economics and EHESS. <em>Topics in Mechanism Design</em>, supervised by David Martimort</span></div></li>
+          <li><span class="when">2010</span><div><b>Ph.D. in Economics</b><span>Toulouse School of Economics and EHESS. <em>Topics in Mechanism Design</em>, supervised by David Martimort. Jury: A. Attar, F. Forges, T. Mariotti, D. Martimort, B. Moldovanu</span></div></li>
           <li><span class="when">2007</span><div><b>M.A. in Economics</b><span>Toulouse School of Economics</span></div></li>
           <li><span class="when">2006</span><div><b>M.A. in Economics</b><span>New Economic School, Moscow</span></div></li>
           <li><span class="when">2004</span><div><b>B.A. in Economics</b><span>Moscow State University</span></div></li>
@@ -592,7 +687,8 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
 <section id="contact" class="contact">
   <div class="wrap">
     <div>
-      <h2 style="margin-bottom:18px"><span class="num">06</span>Contact</h2>
+      <h2 style="margin-bottom:18px"><span class="num">07</span>Get in Touch</h2>
+      <p class="invite">For research collaboration, seminar invitations or questions about my work, please write to me by email.</p>
       <address>
         <a href="mailto:olga.gorelkina@um6p.ma">olga.gorelkina@um6p.ma</a><br>
         Africa Business School<br>
@@ -606,6 +702,7 @@ footer{padding:28px 0 40px;font-size:.8rem;color:var(--ink-3);border-top:1px sol
       <a href="https://abs.um6p.ma/professors_permanent/17786/">Africa Business School <span>faculty page &rarr;</span></a>
       <a href="https://www.linkedin.com/in/olga-gorelkina-5222431/">LinkedIn <span>profile &rarr;</span></a>
       <a href="https://academictree.org/econ/tree.php?pid=815743">Academic Tree <span>lineage &rarr;</span></a>
+      <a href="Olga_Gorelkina_CV.pdf" download>Curriculum Vitae <span>PDF, October 2026 &darr;</span></a>
     </div>
   </div>
 </section>
